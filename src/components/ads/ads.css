@@ -1,0 +1,101 @@
+.ads__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px 00px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post:hover .post-img{
+    top: -5px;
+}
+
+.post-img {
+    position: relative;
+    top: 110px;
+    width: 260px;
+    transition: .5s;
+}
+
+.animate {
+    animation: animate  30s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.post__inner {
+    z-index: 3;
+    height: 300px;
+    background: var(--bg);
+    border: 4px solid var(--border);
+    padding: 20px 15px;
+    width: 340px;
+    border-radius: 0 0 18px 18px;
+}
+
+.post-title {
+    margin-bottom: 40px;
+    font-family: 'Gluten';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 26px;
+    color: var(--black);
+}
+
+.post-price {
+    margin-bottom: 12px;
+    font-family: 'Gluten';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--black);
+}
+
+
+.post-delivery {
+    margin-bottom: 12px;
+    font-family: 'Gluten';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: var(--black);
+}
+
+.post-add {
+    padding: 5px 32px;
+
+    background: var(--green);
+    border: 4px solid var(--border);
+    border-radius: 12px;
+
+    font-family: 'Gluten';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    color: var(--white);
+    transition: .3s;
+}
+
+.post-add:hover {
+    cursor: pointer;
+    background: var(--bg);
+    border: 4px solid var(--green);
+    color: var(--black);
+}

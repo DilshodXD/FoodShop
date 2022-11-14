@@ -1,0 +1,39 @@
+@import "https://fonts.googleapis.com/css2?family=Limelight&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inika&display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Gluten&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #000;
+    --white: #fff;
+    --border: #B4783A;
+    --bg: #D9C7B5;
+    --green: #006400;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 20px auto;
+}
+
+.other-items {
+    padding-top: 90px;
+    padding-left: 260px;
+}

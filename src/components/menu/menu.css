@@ -1,0 +1,8 @@
+.menu__inner{
+    height: 100vh;
+    position: fixed;
+    background-color: var(--white);
+    z-index: 5;
+    border-right: 3px solid var(--border);
+    width: 260px;
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Aralash osh",
+        "price": "80 000",
+        "path": "images/aralash-osh.png"
+    },
+    {
+        "title": "Bayram oshi",
+        "price": "90 000",
+        "path": "images/bayram-oshi.png"
+    },
+    {
+        "title": "Bir kishilik oshi",
+        "price": "17 000",
+        "path": "images/birKishilik-osh.png"
+    },
+    {
+        "title": "Chesnogli osh",
+        "price": "75 000",
+        "path": "images/chesnogli-osh.png"
+    },
+    {
+        "title": "Farg'ona oshi",
+        "price": "70 000",
+        "path": "images/farg'ona-osh.png"
+    },
+    {
+        "title": "Hind oshi",
+        "price": "80 000",
+        "path": "images/hind-osh.png"
+    },
+    {
+        "title": "Qalampirli osh",
+        "price": "70 000",
+        "path": "images/qalampirli-osh.png"
+    },
+    {
+        "title": "Q'ozi go'shtidan osh",
+        "price": "70 000",
+        "path": "images/qo'ziGoshtidan-osh.png"
+    },
+    {
+        "title": "Rus oshi",
+        "price": "80 000",
+        "path": "images/rus-osh.png"
+    },
+    {
+        "title": "Samarqand oshi",
+        "price": "75 000",
+        "path": "images/samarqand-osh.png"
+    },
+    {
+        "title": "To'rt kishilig osh",
+        "price": "65 000",
+        "path": "images/to'rtKishilik-osh.png"
+    },
+    {
+        "title": "Yunusobod oshi",
+        "price": "60 000",
+        "path": "images/yunusobod-osh.png"
+    }
+]
