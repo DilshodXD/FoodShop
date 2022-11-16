@@ -19,11 +19,12 @@
     position: relative;
     top: 110px;
     width: 260px;
-    transition: .5s;
+    transition: .5s !important;
+    -webkit-transition: .5s !important; 
 }
 
 .animate {
-    animation: animate  30s linear infinite;
+    animation: animate  60s linear infinite;
 }
 
 @keyframes animate {
