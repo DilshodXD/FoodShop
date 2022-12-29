@@ -1,42 +1,3 @@
-.ads__inner {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px 00px;
-}
-
-.post {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.post:hover .post-img{
-    top: -5px;
-}
-
-.post-img {
-    position: relative;
-    top: 110px;
-    width: 260px;
-    transition: .5s !important;
-    -webkit-transition: .5s !important; 
-}
-
-.animate {
-    animation: animate  60s linear infinite;
-}
-
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .post__inner {
     z-index: 3;
     height: 300px;
@@ -99,4 +60,32 @@
     background: var(--bg);
     border: 4px solid var(--green);
     color: var(--black);
+}
+
+.post-number {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 26px;
+}
+
+.post-btn {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--black);
+}
+
+.post-btn:active {
+    background-color: rgb(185, 185, 185);
+}
+
+.post-number-key {
+    width: 90px;
+    font-family: 'Gluten';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 15px;
+    color: var(--black);
+    transition: .3s;
 }

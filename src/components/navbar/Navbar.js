@@ -3,19 +3,23 @@ import "./navbar.css";
 
 function Navbar(props) {
 
-  const [value, setValue] = useState("");
-  const search = (e) => {
-    setValue(e.target.value)
-    props.onSubmit(value)
+  const [term, setTerm] = useState('')
+
+  const updateTermHandler = e => {
+    const term = e.target.value.toLowerCase()
+    setTerm(term)
+    props.updateTermHandler(term)
   }
+
+
 
   return (
     <div className="navbar">
       <div className="navbar__inner">
-        <a href="#" className="logo">Food Shop</a>
+        <p className='logo'>Food Shop</p>
         <div className="navbar-right">
           <button className="navbar__btn">Savat</button>
-          <input onChange={search} value={value} className="navbar__search" type="text" placeholder="Taomni qidiring" />
+          <input onChange={updateTermHandler} value={term} className="navbar__search" type="text" placeholder="Taomni qidiring" />
         </div>
       </div>
     </div>

@@ -1,0 +1,41 @@
+/* .posts{
+    margin: 0 auto;
+} */
+
+.posts__inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 25px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post:hover .post-img{
+    top: -5px;
+}
+
+.post-img {
+    position: relative;
+    top: 110px;
+    width: 260px;
+    transition: .5s !important;
+    -webkit-transition: .5s !important; 
+}
+
+.animate {
+    animation: animate  60s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

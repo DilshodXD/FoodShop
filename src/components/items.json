@@ -2,61 +2,73 @@
     {
         "title": "Aralash osh",
         "price": "80 000",
-        "path": "images/aralash-osh.png"
+        "path": "images/aralash-osh.png",
+        "order": false
     },
     {
         "title": "Bayram oshi",
         "price": "90 000",
-        "path": "images/bayram-oshi.png"
+        "path": "images/bayram-oshi.png",
+        "order": false
     },
     {
         "title": "Bir kishilik oshi",
         "price": "17 000",
-        "path": "images/birKishilik-osh.png"
+        "path": "images/birKishilik-osh.png",
+        "order": false
     },
     {
         "title": "Chesnogli osh",
         "price": "75 000",
-        "path": "images/chesnogli-osh.png"
+        "path": "images/chesnogli-osh.png",
+        "order": false
     },
     {
         "title": "Farg'ona oshi",
         "price": "70 000",
-        "path": "images/farg'ona-osh.png"
+        "path": "images/farg'ona-osh.png",
+        "order": false
     },
     {
         "title": "Hind oshi",
         "price": "80 000",
-        "path": "images/hind-osh.png"
+        "path": "images/hind-osh.png",
+        "order": false
     },
     {
         "title": "Qalampirli osh",
         "price": "70 000",
-        "path": "images/qalampirli-osh.png"
+        "path": "images/qalampirli-osh.png",
+        "order": false
     },
     {
         "title": "Q'ozi go'shtidan osh",
         "price": "70 000",
-        "path": "images/qo'ziGoshtidan-osh.png"
+        "path": "images/qo'ziGoshtidan-osh.png",
+        "order": false
     },
     {
         "title": "Rus oshi",
         "price": "80 000",
-        "path": "images/rus-osh.png"
+        "path": "images/rus-osh.png",
+        "order": false
     },
     {
         "title": "Samarqand oshi",
         "price": "75 000",
-        "path": "images/samarqand-osh.png"
+        "path": "images/samarqand-osh.png",
+        "order": false
     },
     {
         "title": "To'rt kishilig osh",
         "price": "65 000",
-        "path": "images/to'rtKishilik-osh.png"
+        "path": "images/to'rtKishilik-osh.png",
+        "order": false
     },
     {
         "title": "Yunusobod oshi",
         "price": "60 000",
-        "path": "images/yunusobod-osh.png"
+        "path": "images/yunusobod-osh.png",
+        "order": false
     }
 ]

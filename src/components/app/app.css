@@ -1,9 +1,9 @@
 @import "https://fonts.googleapis.com/css2?family=Limelight&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Inika&display=swap";
 @import url('https://fonts.googleapis.com/css2?family=Gluten&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css";
 
-
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
