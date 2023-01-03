@@ -2,13 +2,13 @@ import "./post.css";
 import Item from "../item/item";
 
 
-const Ads = ({ items, onDelete, incr, decr }) => {
+const Post = ({ items, onDelete, incr, decr, addCard }) => {
   return (
     <div className="posts">
       <div className="container">
         <div className="posts__inner">
           {items.map((post) =>
-            <Item key={post.id} {...post} onDelete={() => onDelete(post.id)} incr={() => incr(post.id)} decr={() => decr(post.id)} />
+            <Item key={post.id} {...post} addCard={() => addCard(post.id)} onDelete={() => onDelete(post.id)} incr={() => incr(post.id)} decr={() => decr(post.id)} />
           )}
         </div>
       </div>
@@ -16,4 +16,4 @@ const Ads = ({ items, onDelete, incr, decr }) => {
   );
 }
 
-export default Ads;
+export default Post;

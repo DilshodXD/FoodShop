@@ -58,8 +58,24 @@
 .post-add:hover {
     cursor: pointer;
     background: var(--bg);
-    border: 4px solid var(--green);
     color: var(--black);
+}
+
+.post-added{
+    padding: 5px 32px;
+
+    background: transparent;
+    border: 4px solid var(--green);
+    border-radius: 12px;
+
+    font-family: 'Gluten';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--black);
+    line-height: 15px;
+    cursor: pointer;
+    transition: .3s;
 }
 
 .post-number {

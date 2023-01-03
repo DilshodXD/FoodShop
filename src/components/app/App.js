@@ -1,45 +1,74 @@
 import Menu from "../menu/Menu";
 import Navbar from "../navbar/Navbar";
 import Post from "../post/post";
+import Card from '../card/card'
 import "./app.css";
-import { v4 as uuidv4 } from 'uuid';
-import { useEffect, useState } from 'react';
+import { nanoid } from 'nanoid'
+import { useState } from 'react';
 
 
 function App() {
-
   const items = [
-    { number: 0, title: "Aralash osh", price: "80 000", path: "images/aralash-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Bayram oshi", price: "90 000", path: "images/bayram-oshi.png", order: false, id: uuidv4() },
-    { number: 0, title: "Bir kishilik oshi", price: "17 000", path: "images/birKishilik-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Chesnogli osh", price: "75 000", path: "images/chesnogli-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Farg'ona oshi", price: "70 000", path: "images/farg'ona-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Hind oshi", price: "80 000", path: "images/hind-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Qalampirli osh", price: "70 000", path: "images/qalampirli-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Q'ozi go'shtidan osh", price: "70 000", path: "images/qo'ziGoshtidan-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Rus oshi", price: "80 000", path: "images/rus-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "Samarqand oshi", price: "75 000", path: "images/samarqand-osh.png", order: false, id: uuidv4() },
-    { number: 0, title: "To'rt kishilig osh", price: "65 000", path: "images/to'rtKishilik-osh.png", order: false, id: uuidv4() },
+    { card: false, number: 1, price: 21.000, id: nanoid(), title: "Aralash osh", path: "images/aralash-osh.png" },
+    { card: false, number: 1, price: 25.000, id: nanoid(), title: "Bayram oshi", path: "images/bayram-oshi.png" },
+    { card: false, number: 1, price: 17.000, id: nanoid(), title: "Bir kishilik oshi", path: "images/birKishilik-osh.png" },
+    { card: false, number: 1, price: 19.000, id: nanoid(), title: "Chesnogli osh", path: "images/chesnogli-osh.png" },
+    { card: false, number: 1, price: 18.000, id: nanoid(), title: "Farg'ona oshi", path: "images/farg'ona-osh.png" },
+    { card: false, number: 1, price: 25.000, id: nanoid(), title: "Hind oshi", path: "images/hind-osh.png" },
+    { card: false, number: 1, price: 19.000, id: nanoid(), title: "Qalampirli osh", path: "images/qalampirli-osh.png" },
+    { card: false, number: 1, price: 20.000, id: nanoid(), title: "Q'ozi go'shtidan osh", path: "images/qo'ziGoshtidan-osh.png" },
+    { card: false, number: 1, price: 23.000, id: nanoid(), title: "Rus oshi", path: "images/rus-osh.png" },
+    { card: false, number: 1, price: 22.000, id: nanoid(), title: "Samarqand oshi", path: "images/samarqand-osh.png" },
+    { card: false, number: 1, price: 20.000, id: nanoid(), title: "To'y oshi", path: "images/to'rtKishilik-osh.png" },
   ]
 
   const [data, setData] = useState(items)
   const [term, setTerm] = useState('')
+  const [cond, setCond] = useState(false)
+  // const [price, setPrice] = useState()
 
+  const priceLook = (arr) => {
+    const newArr = arr.filter(item => item.card == true)
+    const sum = newArr.reduce((a, v) => a = a + v.price * v.number , 0)
+    return sum
+  }
+  const cardToggle = () => {
+    if (cond) {
+      setCond(false)
+    } else {
+      setCond(true)
+    }
+  }
+  const addCard = (id) => {
+    setData(data.map(item => {
+      if (item.id == id) {
+        if (!item.card) {
+          return { ...item, card: true }
+        }
+        return { ...item, card: false }
+      }
+      return item
+    }))
+  }
+  const filter = (arr, fil) => {
+    switch (fil) {
+      case true:
+        return arr.filter(item => item.card == true)
+      default:
+        return arr
+    }
+  }
   const searchHandler = (arr, term) => {
     if (term === 0) {
       return arr
     }
-
     return arr.filter(item => item.title.toLowerCase().indexOf(term) > -1)
   }
-
   const updateTermHandler = e => setTerm(e)
-
   const onDelete = (id) => {
     const newArray = data.filter(c => c.id !== id)
     setData(newArray)
   };
-
   const incr = (id) => {
     const newArray = data.map(c => {
       if (c.number < 30) {
@@ -51,7 +80,6 @@ function App() {
     })
     setData(newArray)
   }
-
   const decr = (id) => {
     const newArray = data.map(c => {
       if (c.number > 0) {
@@ -64,15 +92,14 @@ function App() {
     setData(newArray)
     console.log(newArray);
   }
-
-  const visibleData = searchHandler(data, term)
+  const visibleData = filter(searchHandler(data, term), cond)
 
   return (
     <div className="App">
-      <Navbar updateTermHandler={updateTermHandler} searchHandler={searchHandler} />
+      <Navbar priceLook={priceLook} items={visibleData} cardToggle={cardToggle} updateTermHandler={updateTermHandler} searchHandler={searchHandler} />
       <Menu />
       <div className="other-items">
-        <Post items={visibleData} incr={incr} decr={decr} onDelete={onDelete} />
+        <Post addCard={addCard} items={visibleData} incr={incr} decr={decr} onDelete={onDelete} />
       </div>
     </div>
   );

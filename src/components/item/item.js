@@ -16,7 +16,7 @@ const Item = (props) => {
                     <p className="post-number-key">{props.number} porsa</p>
                     <button onClick={props.incr} className="post-btn"><i className="fa-solid fa-plus"></i></button>
                 </div>
-                <button className="post-add">Buyurtma berish</button>
+                <button onClick={props.addCard} className={!props.card ? "post-add" : "post-added"}>{!props.card ? "buyurtma berish" : "buyurtma berildi"}</button>
             </div>
         </div>
     );

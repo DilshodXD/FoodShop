@@ -11,14 +11,15 @@ function Navbar(props) {
     props.updateTermHandler(term)
   }
 
-
+  const item = props.priceLook(props.items)
 
   return (
     <div className="navbar">
       <div className="navbar__inner">
-        <p className='logo'>Food Shop</p>
+        <a href='/' className='logo'>Food Shop</a>
+        <p className="navbar__price">Jami narh: <b>{item}.000</b></p>
         <div className="navbar-right">
-          <button className="navbar__btn">Savat</button>
+          <button onClick={props.cardToggle} className="navbar__btn">savat/mahsulot</button>
           <input onChange={updateTermHandler} value={term} className="navbar__search" type="text" placeholder="Taomni qidiring" />
         </div>
       </div>
